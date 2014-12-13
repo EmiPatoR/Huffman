@@ -35,6 +35,7 @@ Huffman::Huffman(const std::string data) {
 
 Huffman::~Huffman() {
 	// TODO Auto-generated destructor stub
+	//ceci est un test
 }
 
 
