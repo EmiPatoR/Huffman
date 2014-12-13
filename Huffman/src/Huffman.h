@@ -14,15 +14,17 @@
 #include <queue>
 #include <functional>
 
-#include "CompareFreq.h"
+#include "Tree.h"
+#include "CompareNodes.h"
 
-typedef std::priority_queue<std::pair<char,unsigned int>,std::vector<std::pair<char,unsigned int> >, CompareFreq> prior_q;
+typedef std::priority_queue<node*,std::vector<node*>, CompareNodes> prior_q;
 
 class Huffman {
 private:
 	std::string m_data;
 	std::map<char,unsigned int> m_occurences;
 	prior_q m_freq;
+	node** m_leaves;
 
 public:
 	//Constructors
@@ -39,6 +41,9 @@ public:
 
 	//show
 	void showOcc(void);
+
+	//Methods
+	Tree* makeTree();
 
 };
 

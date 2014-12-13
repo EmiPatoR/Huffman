@@ -15,7 +15,7 @@
 using namespace std;
 
 int main() {
-
+	Tree* t = NULL;
 	const std::string data = ("wikipedia");
 	Huffman h(data);
 
@@ -23,17 +23,21 @@ int main() {
 
 	//Test
 	h.showOcc();
-	prior_q& test = h.getFreq();
-	std::pair<char, unsigned int> p;
+	//prior_q& test = h.getFreq();
+	//node *n = NULL;
 
-	cout << "FREQ = " << endl;
-	while(!test.empty()){
-		p.first = test.top().first;
-		p.second = test.top().second;
+//	cout << "FREQ = " << endl;
+//	while(!test.empty()){
+//		n = test.top();
+//		cout << "\t - " << n->key.first << " : " << n->key.second << endl;
+//		test.pop();
+//	}
 
-		cout << "\t - " << p.first << " : " << p.second << endl;
-		test.pop();
-	}
+	t = h.makeTree();
+	cout << "DONE ." << endl;
+
+	t->showTree();
+	//cout << " TEST = " << t->getRoot()->key.second << endl;
 
 	return 0;
 }
