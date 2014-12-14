@@ -36,6 +36,9 @@ public:
 	Tree& operator+=(const Tree &t);
 	const Tree operator+(const Tree &other) const;
 
+	//predicates
+	static bool isLeaf(node *n);
+
 	//Getters
 	node* getRoot(){return root;}
 

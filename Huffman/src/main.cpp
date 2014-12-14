@@ -15,29 +15,10 @@
 using namespace std;
 
 int main() {
-	Tree* t = NULL;
 	const std::string data = ("wikipedia");
 	Huffman h(data);
-
-	cout << "Hello world !" << endl; // prints
-
-	//Test
-	h.showOcc();
-	//prior_q& test = h.getFreq();
-	//node *n = NULL;
-
-//	cout << "FREQ = " << endl;
-//	while(!test.empty()){
-//		n = test.top();
-//		cout << "\t - " << n->key.first << " : " << n->key.second << endl;
-//		test.pop();
-//	}
-
-	t = h.makeTree();
-	cout << "DONE ." << endl;
-
-	t->showTree();
-	//cout << " TEST = " << t->getRoot()->key.second << endl;
-
+	//h.showOcc(); // Montre la table d'occurences
+	//h.getTree()->showTree(); // Montre l'arbre ( Parcours en profondeur )
+	h.showCode();
 	return 0;
 }

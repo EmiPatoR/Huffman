@@ -72,4 +72,11 @@ void Tree::showTree(node* n){
 	}
 }
 
+//predicates
+
+bool Tree::isLeaf(node* n){
+	if(n->left == NULL && n->right == NULL)
+		return true;
+	return false;
+}
 
